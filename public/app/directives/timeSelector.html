@@ -1,0 +1,9 @@
+<div class="timeSelector">
+	<timepicker data-ng-show="!readonly"
+				data-ng-model="value"
+				data-ng-change="changed()" 
+				hour-step="1" minute-step="10" 
+				show-meridian="false">
+	</timepicker>
+	<span data-ng-show="readonly">{{value | date:'HH:mm' }} H</span>
+</div>

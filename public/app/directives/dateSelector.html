@@ -1,0 +1,19 @@
+<p class="input-group dateSelector">
+	<input id="input01" 
+		   format="yyyy.MM.dd"
+		   data-ng-readonly="readonly"
+		   data-ng-model="value" 
+		   type="text" 
+		   class="form-control date-editor" 
+	       placeholder="Input01" 
+		   datepicker-popup="yyyy.MM.dd"  
+		   is-open="opened"
+	       datepicker-options="dateOptions" 
+	       date-disabled="disabledDates(date, mode)"
+	       />
+	<span class="input-group-btn">
+		<button type="button" class="btn btn-default inline-ico" data-ng-click="open($event)" data-ng-disabled="readonly">
+			<i class="glyphicon glyphicon-calendar"></i>
+		</button>
+	</span>
+</p>

@@ -1,0 +1,53 @@
+<div class="row">
+	<div class="col-md-2"></div>
+	<div class="col-md-8">
+		<h1 translate="appName"></h1>
+		<p translate="main.welcome"></p>
+
+		<div class="row text-left">
+			<div class="col-md-6">
+				<h2 translate="admin.resources"></h2>
+				<ul class="nav nav-pills nav-stacked">	
+					<li>
+						<a class="entryMenu" 
+						   href="#/user"
+						   translate="label.class.plural.user">
+						</a>
+					</li>
+		
+				</ul>
+			</div>
+			
+			<div ng-show="userHasAdminRole()" class="col-md-6">
+				<h2 translate="admin.configuration"></h2>
+				<ul class="nav nav-pills nav-stacked">	
+					<li>
+						<a class="entryMenu" href="#/admin/apiKeys/">
+							<img src="/images/adminKey.png" class="admin-logo"/>
+							<span translate="main.admin.apikeys"></span>
+						</a> 
+						<span translate="main.admin.apikeysDescription"></span>
+					</li>
+					<li>
+						<a class="entryMenu" href="#/admin/webHooks/">
+							<img src="/images/adminHook.png" class="admin-logo"/>
+							<span translate="main.admin.webhooks"></span>
+						</a> 
+						<span translate="main.admin.webhooksDescription"></span>
+					</li>
+				</ul>
+				
+			</div>
+		</div>	
+				
+		<br/>
+		<br/>
+		<p>
+			<span translate="main.exploreApi"></span> 
+			<a href="/api/documentation" target="_blank" translate="main.raw"></a>
+			<span translate="main.orWith"></span> 
+			<a href="http://apiexplorer.radarconline.com/?uri={{serviceUriBase}}/api/documentation&apiKey={{apikey}}" target="_blank" translate="main.apiExplorer"></a>.
+		</p>
+	</div>
+	<div class="col-md-2"></div>
+</div>

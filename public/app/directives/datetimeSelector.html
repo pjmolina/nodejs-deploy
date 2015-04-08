@@ -1,0 +1,26 @@
+<div class="input-group datetimeSelector">
+	<input id="input01" 
+		   format="yyyy.MM.dd"	
+		   data-ng-show="!readonly"
+		   data-ng-model="value" 
+		   type="text" 
+		   class="form-control date-editor"
+	       placeholder="Input01" 
+		   datepicker-popup="yyyy.MM.dd"  
+		   is-open="opened"
+	       datepicker-options="dateOptions" 
+	       date-disabled="disabledDates(date, mode)"
+	       />
+	<span class="input-group-btn" data-ng-show="!readonly">
+		<button type="button" class="btn btn-default inline-ico" data-ng-click="open($event)" data-ng-disabled="readonly">
+			<i class="glyphicon glyphicon-calendar"></i>
+		</button>
+	</span>
+	<timepicker data-ng-show="!readonly"
+				data-ng-model="value"
+				data-ng-change="changed()" 
+				hour-step="1" minute-step="10" 
+				show-meridian="false">
+	</timepicker>
+	<span data-ng-show="readonly">{{value | date:'yyyy.MM.dd Z HH:mm' }} H</span>
+</div>
